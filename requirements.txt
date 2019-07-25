@@ -1,0 +1,13 @@
+requests
+flask==1.0.2
+flask_restful
+redis
+pandas==0.23.4
+tzlocal
+pandas_datareader
+rpy2
+werkzeug==0.14.1
+dash==0.41.0
+sqlalchemy
+mysqlclient
+

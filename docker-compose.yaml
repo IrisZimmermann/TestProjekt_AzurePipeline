@@ -1,0 +1,24 @@
+---
+version: "3.5"
+
+services:
+  db:
+    container_name: "db"
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: advisori
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - ./data/market.db.sql:/docker-entrypoint-initdb.d/market.db.sql
+    networks:
+      - aaa_net
+volumes:
+  data:
+networks:
+  aaa_net:
+    name: aaa_net
